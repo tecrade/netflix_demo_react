@@ -1,0 +1,60 @@
+
+.banner{
+    background-size: cover;
+    height: 435px;
+    width:100%;
+    background-position:0% 10%;
+}
+.logo_n{
+    height:30px;
+    width:30px;
+}
+.banner_content{
+    padding-top: 80px;
+    padding-left:15px;
+    max-height:200px;
+    max-width:400px;
+    color: #fff;
+}
+.nseries{
+ display: flex;
+}
+.nseries_series{
+    margin-top:0.5rem;
+}
+.banner_button button{
+    border-style: hidden;
+    border-radius:10%;
+    height: 30px;
+    width:100px;
+    margin-right:1rem;
+    outline:none;
+    background-color: rgb(94, 92, 92,0.5);
+    color: #fff;
+}
+.gradient{
+    height: 7rem;
+    margin-top:3.5rem;
+     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
+}
+.banner_discription{
+    margin-top:2rem;
+    line-height:1.6;
+    width:450px;
+    max-height:100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.banner_discription p{
+    color:rgb(255, 255, 255,0.7);
+}
+.title{
+    font-size:30px;
+    line-height:0.8;
+}
+.banner_button{
+    margin-top:1rem;
+}
+.banner_discription::-webkit-scrollbar{
+    display: none;
+}
