@@ -36,5 +36,7 @@
 }
 .searchbar{
     display:flex;
+    margin-left:10rem;
+    position: fixed;
     flex-direction: column;
 }

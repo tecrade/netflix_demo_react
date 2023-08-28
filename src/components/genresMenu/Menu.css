@@ -1,0 +1,33 @@
+.genresMenu{
+background-color:#111;
+margin-right: 0%;
+margin-top:1.5rem;
+margin-left:65rem;
+width: 200px;
+height:300px;
+}
+.genresMenu ul{
+    list-style-type: none;
+    background-color: #111;
+}
+.genresMenu ul li{
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+}
+.genresMenuNavbar{
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+}
+.genresMenu ul li:hover,.genresMenuNavbar:hover{
+    background-color:#fff;
+    color: #111;
+}

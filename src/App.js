@@ -1,29 +1,41 @@
 import NavBar from './components/navbar/NavBar';
+import { BrowserRouter, Routes ,Route} from 'react-router-dom';
 import React, { useState } from 'react';
 import Banner from './components/banner/Banner';
-import Rowposter from './components/rowposter/Rowposter';
+import Comedy from './pages/Comedy';
+import Horror from './pages/Horror';
+import Trending from './pages/Trending';
+import Action from './pages/Action';
+import Romance from './pages/Romance';
+import Home from './pages/Home';
 import './App.css';
-import './components/navbar/NavBar.css';
-import './components/banner/Banner.css';
-import './components/rowposter/Rowposter.css';
-import {originalurl,actionurl,horrorurl,comedyurl,documentaryurl,romanceurl,trendingurl} from './constants'
+import {originalurl,actionurl,horrorurl,comedyurl,documentaryurl,romanceurl,trendingurl,imageurl,apikey,baseurl} from './constants'
 import Youtube from './components/youtube/Youtube'
+import { AppContext } from './AppContext';
+import Documentary from './pages/Documentary';
 function App() {
   const [banner,setBanner]=useState({});
   const[video,setVideo]=useState();
   const[searchList,setSearchList]=useState();
+  const[avatar,setAvatar]=useState(false);
   return (
     <div className="App">
-      <NavBar setBanner={setBanner} searchList={searchList} setSearchList={setSearchList}/>
-      <Banner banner={banner} setBanner={setBanner} setVideo={setVideo} />
+      <BrowserRouter>
+      <AppContext.Provider value={{banner,avatar,setAvatar,video,searchList,setBanner,setVideo,setSearchList,originalurl,trendingurl,actionurl,comedyurl,romanceurl,documentaryurl,imageurl,horrorurl,apikey,baseurl}}>
+      <NavBar/>
+      <Banner/>
       {video && <Youtube video={video.key} height="315px" width="100%" autoplay="1"/>}
-      <Rowposter url={originalurl} title='Netflix Originals' setBanner={setBanner} />
-      <Rowposter url={trendingurl} title='Trending Now' setBanner={setBanner}/>
-      <Rowposter url={actionurl} title='Action' setBanner={setBanner}/>
-      <Rowposter url={comedyurl} title='Comedy' setBanner={setBanner}/>
-      <Rowposter url={romanceurl} title='Romance' setBanner={setBanner}/>
-      <Rowposter url={horrorurl} title='Horror' setBanner={setBanner}/>
-      <Rowposter url={documentaryurl} title='Documentary' setBanner={setBanner}/>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/action' element={<Action/>}></Route>
+        <Route path='/comedy' element={<Comedy/>}></Route>
+        <Route path='/romance' element={<Romance/>}></Route>
+        <Route path='/trending' element={<Trending/>}></Route>
+        <Route path='/documentary' element={<Documentary/>}></Route>
+        <Route path='/horror' element={<Horror/>}></Route>
+      </Routes>
+      </AppContext.Provider>
+      </BrowserRouter>
     </div>
   );
 }
