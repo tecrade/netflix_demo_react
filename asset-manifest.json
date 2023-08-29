@@ -1,7 +1,7 @@
 {
   "main.css": "/netflix_demo_react/static/css/main.28efc332.chunk.css",
-  "main.js": "/netflix_demo_react/static/js/main.417b1ca9.chunk.js",
-  "main.js.map": "/netflix_demo_react/static/js/main.417b1ca9.chunk.js.map",
+  "main.js": "/netflix_demo_react/static/js/main.9b2f191a.chunk.js",
+  "main.js.map": "/netflix_demo_react/static/js/main.9b2f191a.chunk.js.map",
   "static/js/1.a55ae8da.chunk.js": "/netflix_demo_react/static/js/1.a55ae8da.chunk.js",
   "static/js/1.a55ae8da.chunk.js.map": "/netflix_demo_react/static/js/1.a55ae8da.chunk.js.map",
   "static/js/2.ebef652b.chunk.js": "/netflix_demo_react/static/js/2.ebef652b.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/netflix_demo_react/static/js/runtime~main.f334b87d.js.map",
   "static/css/main.28efc332.chunk.css.map": "/netflix_demo_react/static/css/main.28efc332.chunk.css.map",
   "index.html": "/netflix_demo_react/index.html",
-  "precache-manifest.0cd2438136a61630609afda8ea2d76e3.js": "/netflix_demo_react/precache-manifest.0cd2438136a61630609afda8ea2d76e3.js",
+  "precache-manifest.a12b284495311ea50996d9b20b1db969.js": "/netflix_demo_react/precache-manifest.a12b284495311ea50996d9b20b1db969.js",
   "service-worker.js": "/netflix_demo_react/service-worker.js"
 }
