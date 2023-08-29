@@ -26,7 +26,7 @@ function App() {
       <Banner/>
       {video && <Youtube video={video.key} height="315px" width="100%" autoplay="1"/>}
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        <Route exact path='/' element={<Home/>}></Route>
         <Route path='/action' element={<Action/>}></Route>
         <Route path='/comedy' element={<Comedy/>}></Route>
         <Route path='/romance' element={<Romance/>}></Route>
