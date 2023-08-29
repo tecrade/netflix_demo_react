@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e21771c567de71583251",
-    "url": "/netflix_demo_react/static/css/main.f7c3da7f.chunk.css"
+    "revision": "417b1ca9af41483e6f3b",
+    "url": "/netflix_demo_react/static/css/main.28efc332.chunk.css"
   },
   {
-    "revision": "e21771c567de71583251",
-    "url": "/netflix_demo_react/static/js/main.e21771c5.chunk.js"
+    "revision": "417b1ca9af41483e6f3b",
+    "url": "/netflix_demo_react/static/js/main.417b1ca9.chunk.js"
   },
   {
     "revision": "a55ae8da76b6c0c45aec",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/netflix_demo_react/static/js/runtime~main.f334b87d.js"
   },
   {
-    "revision": "8ee8dfb0dfee6c78bae72099976c3266",
+    "revision": "fa19200a7a211d18406f5b531063d985",
     "url": "/netflix_demo_react/index.html"
   }
 ];
