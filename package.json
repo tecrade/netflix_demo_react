@@ -1,7 +1,7 @@
 {
   "name": "netflix",
   "version": "0.1.0",
-  "homepage": "https://tecrade.github.io/netflix_demo_react/",
+  "homepage": "https://tecrade.github.io/netflix_demo_react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
