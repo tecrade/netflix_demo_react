@@ -20,7 +20,7 @@ function App() {
   const[avatar,setAvatar]=useState(false);
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
       <AppContext.Provider value={{banner,avatar,setAvatar,video,searchList,setBanner,setVideo,setSearchList,originalurl,trendingurl,actionurl,comedyurl,romanceurl,documentaryurl,imageurl,horrorurl,apikey,baseurl}}>
       <NavBar/>
       <Banner/>
