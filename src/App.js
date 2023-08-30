@@ -1,6 +1,6 @@
 import NavBar from './components/navbar/NavBar';
-import { BrowserRouter, Routes ,Route} from 'react-router-dom';
-import React, { useState } from 'react';
+import { HashRouter, Routes ,Route} from 'react-router-dom';
+import React, { useState} from 'react';
 import Banner from './components/banner/Banner';
 import Comedy from './pages/Comedy';
 import Horror from './pages/Horror';
@@ -20,13 +20,13 @@ function App() {
   const[avatar,setAvatar]=useState(false);
   return (
     <div className="App">
-      <BrowserRouter basename='/'>
+      <HashRouter>
       <AppContext.Provider value={{banner,avatar,setAvatar,video,searchList,setBanner,setVideo,setSearchList,originalurl,trendingurl,actionurl,comedyurl,romanceurl,documentaryurl,imageurl,horrorurl,apikey,baseurl}}>
       <NavBar/>
       <Banner/>
       {video && <Youtube video={video.key} height="315px" width="100%" autoplay="1"/>}
       <Routes>
-        <Route exact path='/' element={<Home/>}></Route>
+        <Route path='/' exact element={<Home/>}></Route>
         <Route path='/action' element={<Action/>}></Route>
         <Route path='/comedy' element={<Comedy/>}></Route>
         <Route path='/romance' element={<Romance/>}></Route>
@@ -35,7 +35,7 @@ function App() {
         <Route path='/horror' element={<Horror/>}></Route>
       </Routes>
       </AppContext.Provider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
