@@ -9,9 +9,12 @@ function Rowposter(props) {
   const [poster,setPoster]=useState([])
   const {setBanner,imageurl}=useContext(AppContext)
   useEffect(()=>{
+    if(props.url){
     axios.get(props.url).then((response)=>{
-      setPoster(response.data.results);
-    })
+      response?setPoster(response.data.results):setPoster("")
+    })}else{
+      setPoster(props.list)
+    }
   },[])
   return (
     <div className='rowposter'>

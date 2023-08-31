@@ -13,15 +13,19 @@ import {originalurl,actionurl,horrorurl,comedyurl,documentaryurl,romanceurl,tren
 import Youtube from './components/youtube/Youtube'
 import { AppContext } from './AppContext';
 import Documentary from './pages/Documentary';
+import Mylist from './pages/Mylist';
 function App() {
   const [banner,setBanner]=useState({});
   const[video,setVideo]=useState();
   const[searchList,setSearchList]=useState();
   const[avatar,setAvatar]=useState(false);
+  const[mylist,setMylist]=useState(false);
+
+
   return (
     <div className="App">
       <HashRouter>
-      <AppContext.Provider value={{banner,avatar,setAvatar,video,searchList,setBanner,setVideo,setSearchList,originalurl,trendingurl,actionurl,comedyurl,romanceurl,documentaryurl,imageurl,horrorurl,apikey,baseurl}}>
+      <AppContext.Provider value={{banner,avatar,mylist,setAvatar,video,searchList,setBanner,setVideo,setSearchList,setMylist,originalurl,trendingurl,actionurl,comedyurl,romanceurl,documentaryurl,imageurl,horrorurl,apikey,baseurl}}>
       <NavBar/>
       <Banner/>
       {video && <Youtube video={video.key} height="315px" width="100%" autoplay="1"/>}
@@ -33,6 +37,7 @@ function App() {
         <Route path='/trending' element={<Trending/>}></Route>
         <Route path='/documentary' element={<Documentary/>}></Route>
         <Route path='/horror' element={<Horror/>}></Route>
+        <Route path='/mylist' element={<Mylist/>}></Route>
       </Routes>
       </AppContext.Provider>
       </HashRouter>
